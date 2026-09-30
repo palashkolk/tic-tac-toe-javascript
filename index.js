@@ -127,7 +127,6 @@ const displayController = (function (){
         if (gameController.checkGameOverStatus()||e.target.textContent !=="") return;
         gameController.playRound(selectedIndex);
         renderBoard();
-
     };
     const updateMessage = (text) => {
         messageDiv.textContent = text;
@@ -138,7 +137,7 @@ const displayController = (function (){
         renderBoard();
         updateMessage(`${gameController.getActivePlayer().name}'s turn...`);
     });
-    
+
     renderBoard();
     updateMessage(`${gameController.getActivePlayer().name}'s turn...`);
     return { updateMessage };
